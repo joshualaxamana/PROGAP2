@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="true" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Joshua\Downloads\MVCDemo"/>
+			<item value=""/>
+			<item value="C:\Users\Joshua\Downloads"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+			<item value="C:\Users\Joshua\Downloads\JavaBeansDemo.zip"/>
+			<item value="C:\Users\Joshua\Downloads\MVCDemo with Database.zip"/>
+			<item value="C:\Users\Joshua\Downloads\ThreadDemoSynchronized.zip"/>
+			<item value="C:\Users\Joshua\Downloads\ThreadDemo.zip"/>
+			<item value="C:\Users\Joshua\Downloads\ServletDemo.zip"/>
+			<item value="C:\Users\Joshua\Downloads\MVCDemo.zip"/>
+			<item value="C:\Users\Joshua\Downloads\JSPTags.zip"/>
+			<item value="C:\Users\Joshua\Downloads\IntroJSP.zip"/>
+			<item value="C:\Users\Joshua\Downloads\FormData.zip"/>
+			<item value="C:\Users\Joshua\Downloads\ExceptionDemo.zip"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+</section>

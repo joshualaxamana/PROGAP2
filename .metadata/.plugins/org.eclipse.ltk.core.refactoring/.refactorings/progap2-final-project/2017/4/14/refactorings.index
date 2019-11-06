@@ -1,0 +1,27 @@
+1491377135479	Move file
+1491378373008	Move 'MoviesPage.jsp' to 'WebContent'
+1491380110204	Move file
+1491380115384	Move 'MoviesPage.jsp' to 'WebContent'
+1491384361067	Rename package 'csb.progap2.project.dao'
+1491408029773	Rename type 'Login'
+1491408842391	Rename type 'LoginServlet'
+1491411377120	Delete element
+1491412455557	Delete element
+1491415105361	Delete element
+1491458441603	Encapsulate field 'email'
+1491464510987	Rename type 'AdminHomeServlet'
+1491544075445	Move 'adminWelcome.jsp' to 'WEB-INF'
+1491544198355	Move 7 resources to 'WEB-INF'
+1491544352079	Move 8 resources to 'WebContent'
+1491557603354	Delete element
+1491569290204	Delete element
+1491569307850	Rename type 'AdminAddMoviesServlet'
+1491569321093	Delete element
+1491571296368	Rename type 'AdminMoviesServlet'
+1491572904962	Rename type 'Movies'
+1491574968278	Rename type 'AdminDeleteMovies'
+1491577628909	Delete element
+1491577997235	Delete element
+1491651391182	Delete element
+1491653811050	Delete element
+1491660426456	Delete element

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="0" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<item value="C:\Users\Joshua\Documents\PROGAP2\progap2-final-project\.git" key="GitSelectRepositoryPage.lastRepository"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://joshlaxamana@bitbucket.org/aimfor4/progap2-final-project.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="github.com"/>
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item value="632" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="462" key="DIALOG_HEIGHT"/>
+		<item value="780" key="DIALOG_X_ORIGIN"/>
+		<item value="368" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

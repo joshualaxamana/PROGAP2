@@ -1,0 +1,70 @@
+package csb.progap2.tixtogo;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+import csb.progap2.tixtogo.dao.MovieDao;
+import csb.progap2.tixtogo.model.Movie;
+import csb.progap2.tixtogo.businesslogic.Login;
+import csb.progap2.tixtogo.businesslogic.LoginService;
+import csb.progap2.tixtogo.businesslogic.MovieService;
+
+/**
+ * Servlet implementation class AdminAddMoviesServlet
+ */
+@WebServlet(name = "AdminAddMovies", urlPatterns = { "/AdminAddMovies" })
+public class AdminAddMoviesServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public AdminAddMoviesServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LoginService ls = new Login(request.getSession());
+		if(!ls.isLoggedIn()) {
+			response.sendRedirect("AdminHomePage");
+			return;
+		}
+		
+		RequestDispatcher rd = request.getRequestDispatcher("/adminMovies.jsp");
+		rd.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LoginService ls = new Login(request.getSession());
+		if(!ls.isLoggedIn()) {
+			response.sendRedirect("AdminHomePage");
+			return;
+		}
+		
+		Movie m = new Movie();
+		m.setMovieID(Integer.parseInt(request.getParameter("movieID")));
+		m.setTitle(request.getParameter("title"));
+		m.setSynopsys(request.getParameter("synopsys"));
+		
+		MovieService ms = new MovieDao();
+		ms.addMovie(m);
+		
+		// Using response.sendRedirect
+		response.sendRedirect("AdminMovies");	
+	}
+
+}

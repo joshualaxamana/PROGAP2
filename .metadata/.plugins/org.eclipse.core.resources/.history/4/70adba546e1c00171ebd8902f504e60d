@@ -1,0 +1,61 @@
+package csb.progap2.tixtogo;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import csb.progap2.tixtogo.businesslogic.Login;
+import csb.progap2.tixtogo.businesslogic.LoginService;
+import csb.progap2.tixtogo.dao.UserDao;
+import csb.progap2.tixtogo.model.User;
+
+/**
+ * Servlet implementation class AdminHomePageServlet
+ */
+@WebServlet(name = "AdminHomePage", urlPatterns = { "/AdminHomePage" })
+public class AdminHomePageServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public AdminHomePageServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("/adminHomepage.jsp");
+		rd.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LoginService ls = new UserDao();
+		String email = request.getParameter("email");
+		String pw = request.getParameter("pw");
+		User user = ls.login(email, pw);
+		if(user == null) {
+			request.setAttribute("invalidLogin", true);
+			RequestDispatcher rd = request.getRequestDispatcher("/adminHomepage.jsp");
+			rd.forward(request, response);
+		}
+		else {
+			HttpSession session = request.getSession();
+			session.setAttribute("currentUser", user);
+			response.sendRedirect("AdminWelcome");
+		}
+	}
+
+}
